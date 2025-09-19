@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <title>FAQs — TechAlive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Answers to common questions about refurbished laptops, payments, repairs, warranties, and support from TechAlive." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="logo-dot" aria-hidden="true"></span>
+        <span class="brand-text">TechAlive</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="faq.html" class="nav-link active">FAQs</a>
+        <a href="https://www.ebay.co.uk/str/unique-technology-solutions" class="nav-link" target="_blank" rel="noopener">eBay Store</a>
+        <a href="index.html#contact" class="nav-link btn btn-primary">Contact</a>
+        <button class="mode-toggle" id="modeToggle" aria-label="Toggle theme">☀️/🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero light">
+    <div class="container">
+      <h1>Frequently Asked Questions</h1>
+      <p>Your quick guide to refurbished systems, payments, repairs, and warranties.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container narrow faq">
+      <details>
+        <summary>What is a refurbished computer or laptop?</summary>
+        <p>A refurbished laptop or computer is a previously used system that has undergone thorough <strong>quality and reliability checks</strong>. Parts such as batteries, screens, and keyboards are tested, and replaced if necessary, to ensure they perform comparably to new hardware.</p>
+      </details>
+
+      <details>
+        <summary>Are refurbished computers and laptops reliable?</summary>
+        <p>Yes. All units are tested extensively and supplied in good working condition. We provide a <strong>30-day hardware warranty</strong> for peace of mind. Failures are rare, but in the event of one, you are covered.</p>
+      </details>
+
+      <details>
+        <summary>How do I purchase a system?</summary>
+        <p>Email us with the item you’d like to purchase. We’ll provide payment details, and once payment is received, your order will be dispatched with a tracking number.</p>
+      </details>
+
+      <details>
+        <summary>What payment methods do you accept?</summary>
+        <p>We currently accept <strong>PayPal</strong> and <strong>bank transfer</strong>, ensuring all transactions are secure.</p>
+      </details>
+
+      <details>
+        <summary>How are goods shipped and what are the delivery times?</summary>
+        <p>Once payment clears, goods are carefully packed and shipped promptly using trusted couriers such as <strong>DPD, Evri, or Royal Mail</strong>. UK delivery typically takes <strong>24–48 hours</strong>.</p>
+      </details>
+
+      <details>
+        <summary>What does the warranty cover?</summary>
+        <p>Our warranty covers <strong>hardware failures</strong> caused by system faults. It does not cover physical damage, liquid damage, user-caused software issues, or misuse.</p>
+      </details>
+
+      <details>
+        <summary>How do I get a repair quote?</summary>
+        <p>Send us an image of the fault, along with the make, model, and a detailed description. We’ll review the information and provide a quote.</p>
+      </details>
+
+      <details>
+        <summary>What is the repair time frame?</summary>
+        <p>We aim to return systems as quickly as possible. Turnaround depends on parts availability and the complexity of the fault, but we always keep you updated.</p>
+      </details>
+
+      <details>
+        <summary>Do you offer call-outs?</summary>
+        <p>Yes, depending on location. Currently available across <strong>Leicestershire</strong> (previously Stourbridge), and may include a call-out fee.</p>
+      </details>
+
+      <details>
+        <summary>Can I drop off my faulty unit?</summary>
+        <p>Yes. Please contact us first to arrange a convenient time and confirm the address.</p>
+      </details>
+
+      <div class="about-cta" style="margin-top:1.2rem">
+        <a class="btn btn-primary" href="index.html#contact">Ask a Question</a>
+        <a class="btn btn-ebay" href="https://www.ebay.co.uk/str/unique-technology-solutions" target="_blank" rel="noopener">🛒 Shop on eBay</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> TechAlive. All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="faq.html">FAQs</a>
+        <a href="https://www.ebay.co.uk/str/unique-technology-solutions" target="_blank" rel="noopener">eBay Store</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const modeToggle = document.getElementById('modeToggle');
+    const applyMode = (m) => document.documentElement.setAttribute('data-theme', m);
+    const saved = localStorage.getItem('ta-theme');
+    if(saved) applyMode(saved);
+    modeToggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme') || 'dark';
+      const next = current === 'dark' ? 'light' : 'dark';
+      applyMode(next); localStorage.setItem('ta-theme', next);
+    });
+  </script>
+</body>
+</html>
