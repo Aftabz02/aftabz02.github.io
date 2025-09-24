@@ -1,83 +1,97 @@
 <!doctype html>
 <html lang="en" data-theme="dark">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>About • TechAlive</title>
-  <link rel="icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/style.css">
+  <meta charset="utf-8" />
+  <title>About Us — TechAlive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn about TechAlive — 20+ years of IT repair, upgrades, software support, and customer-first service in Leicestershire." />
+  <meta property="og:title" content="About TechAlive" />
+  <meta property="og:description" content="Two decades of hands-on experience and customer-first support across Leicestershire." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" />
 </head>
 <body>
-  
-<nav class="nav">
-  <div class="container inner">
-    <a class="brand" href="/">
-      <span class="brand-logo"></span>
-      <span>TechAlive</span>
-    </a>
-    <div class="menu">
-      <a href="/index.html" class="">Home</a>
-      <a href="/services.html" class="">Services</a>
-      <a href="/about.html" class="active">About</a>
-      <a href="/faq.html" class="">FAQ</a>
-      <a href="/booking.html" class="btn">Book / Contact</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="TechAlive Home">
+        <img src="/assets/img/TechAlive_Logo_Navbar_200w.png" alt="TechAlive Logo" class="brand-logo" />
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" class="nav-link">🏠 Home</a>
+        <a href="about.html" class="nav-link active">ℹ️ About</a>
+        <a href="services.html" class="nav-link">🛠️ Services</a>
+        <a href="faq.html" class="nav-link">❓ FAQs</a>
+        <a href="https://www.ebay.co.uk/usr/techalive" class="nav-link" target="_blank" rel="noopener">🛒 eBay Store</a>
+        <a href="index.html#contact" class="nav-link btn btn-primary">📞 Contact</a>
+      </nav>
     </div>
-  </div>
-</nav>
+  </header>
 
-  <main class="section">
+  <section class="page-hero light">
     <div class="container">
       <h1>About TechAlive</h1>
-      <div class="grid-2">
-        <div class="card">
-          <p>At <strong>TechAlive</strong>, technology is more than business — it’s a passion. With 20+ years of hands‑on experience, we help homes and small businesses keep their tech running smoothly: repairs, upgrades, honest advice and quality refurbished gear.</p>
-          <p>Based in <strong>Leicester</strong>, serving the UK.</p>
-          <ul>
-            <li>PCB‑level repairs & port replacements</li>
-            <li>Refurbished laptops with warranty</li>
-            <li>Software support across Windows, Linux & more</li>
-            <li>Friendly, straight‑talking service</li>
-          </ul>
-        </div>
-        <div class="card">
-          <img src="/assets/img/pcb-rework.jpg" alt="PCB rework at TechAlive">
-        </div>
-      </div>
+      <p>Bringing your technology back to life since 2000.</p>
     </div>
-  </main>
-  
-<footer class="footer">
-  <div class="container">
-    <div class="cta card">
-      <div>
-        <h3 style="margin:0 0 6px">Need help today?</h3>
-        <p class="muted" style="margin:0">Fast diagnostics, honest pricing, friendly service.</p>
-      </div>
-      <a class="btn" href="/booking.html">Get a Free Quote</a>
-    </div>
-    <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:16px;margin-top:18px">
-      <div>
-        <strong>TechAlive</strong><br>
-        Leicester, UK<br>
-        <a href="mailto:hello@techalive.co.uk">hello@techalive.co.uk</a>
-      </div>
-      <div>
-        <strong>Pages</strong><br>
-        <a href="/services.html">Services</a><br>
-        <a href="/about.html">About</a><br>
-        <a href="/faq.html">FAQ</a><br>
-        <a href="/booking.html">Book / Contact</a><br>
-      </div>
-      <div>
-        <strong>Shop</strong><br>
-        <a href="https://www.ebay.co.uk/usr/techalive" target="_blank" rel="noopener">eBay Store</a><br>
-      </div>
-    </div>
-    <div style="margin-top:16px">
-      <small>© 2025 TechAlive. All rights reserved.</small>
-    </div>
-  </div>
-</footer>
+  </section>
 
+  <section class="section">
+    <div class="container narrow">
+      <h2>Who We Are</h2>
+      <p>At <strong>TechAlive</strong>, technology is more than just our business – it’s our passion. With over two decades of hands-on experience in repairing, upgrading, and supporting IT systems, we are dedicated to keeping your technology running smoothly and reliably.</p>
+      <p>Since 2000, we have been helping both home users and businesses across Leicestershire and beyond with a wide range of services, including:</p>
+
+      <ul class="about-list">
+        <li><strong>Repairs & Refurbishment</strong> – Expert repairs for PCs, laptops, gaming consoles, and mobile phones, including component-level PCB work, screen replacements, and port repairs. We also offer quality refurbished laptops, parts, and electronics at affordable prices.</li>
+        <li><strong>Upgrades & Customisation</strong> – Tailored upgrades to extend the life of your devices, improve performance, and meet your specific needs.</li>
+        <li><strong>Software & System Support</strong> – From Microsoft Office to third-party applications, as well as Android, Linux, iOS, and Windows systems – we provide troubleshooting, installation, and professional advice.</li>
+        <li><strong>Data Recovery & Diagnostics</strong> – Reliable data recovery solutions and in-depth fault-finding to get you back on track.</li>
+        <li><strong>3D Printing & Design Support</strong> – Helping you bring your design ideas to life with practical 3D printing services.</li>
+        <li><strong>B2B & B2C Services</strong> – Supporting individuals, families, and businesses with cost-effective IT solutions, including home visits across Leicestershire.</li>
+      </ul>
+
+      <p>Over the years, we have traded under names such as <em>Fatma Computers</em> and <em>Unique Technology Solutions</em>, always with one mission: to deliver affordable, high-quality services while building long-term relationships based on trust, reliability, and customer satisfaction.</p>
+
+      <p>With recognised IT qualifications, a proven track record, and a friendly, hardworking approach, TechAlive is committed to ensuring every customer leaves happy – and every device works at its best.</p>
+
+      <div class="quote-box">
+        <p class="quote-text">“Your technology matters. Let us bring it back to life.”</p>
+      </div>
+
+      <div class="about-cta">
+        <a class="btn btn-primary" href="index.html#contact">Request a Free Quote</a>
+        <a class="btn btn-ghost" href="services.html">Explore Services</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> TechAlive. All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="faq.html">FAQs</a>
+        <a href="https://www.ebay.co.uk/str/unique-technology-solutions" target="_blank" rel="noopener">eBay Store</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const modeToggle = document.getElementById('modeToggle');
+    const applyMode = (m) => document.documentElement.setAttribute('data-theme', m);
+    const saved = localStorage.getItem('ta-theme');
+    if(saved) applyMode(saved);
+    modeToggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme') || 'dark';
+      const next = current === 'dark' ? 'light' : 'dark';
+      applyMode(next); localStorage.setItem('ta-theme', next);
+    });
+  </script>
 </body>
 </html>
