@@ -58,6 +58,10 @@ html, body {
   position: relative; overflow: hidden; color: #fff; text-align: center;
   min-height: 420px; padding: 4rem 1rem 3rem;
 }
+.ta-hero__background {
+  position: absolute; inset: 0;
+  z-index: -2;
+}
 @media (max-width: 768px) {
   .ta-hero__background {
   }
@@ -213,70 +217,22 @@ picture { display: block; max-width: 100%; height: auto; }
 picture img { display: block; max-width: 100%; height: auto; border-radius: inherit; }
 
 
-/* --- Nav icon styling --- */
+/* SVG nav icons */
 .nav-link { display: inline-flex; align-items: center; gap: .4rem; }
-.nav-icon { width: 18px; height: 18px; display: inline-block; fill: currentColor; }
-/* Slightly nudge icons down to align with text visually */
-.nav-icon { vertical-align: -2px; }
+.nav-icon { width: 18px; height: 18px; display: inline-block; fill: currentColor; vertical-align: -2px; }
 
-/* --- Mobile header spacing for taller logo --- */
+/* Hero gradient background (no images) */
+.ta-hero { position: relative; overflow: hidden; text-align: center; color: #fff; min-height: 360px; padding: 3rem 1rem 2.25rem; }
+.ta-hero__background { position: absolute; inset: 0; background: linear-gradient(135deg, var(--blue) 0%, var(--accent) 100%); z-index: -2; }
+.ta-hero__overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.35); z-index: -1; }
+
+/* Trust bar SVG icons */
+.trust-icon { width: 32px; height: 32px; display: inline-block; fill: currentColor; flex-shrink: 0; }
+.trust-item { display: flex; align-items: center; gap: .6rem; }
+
+/* Mobile spacing for taller logo */
 @media (max-width: 640px) {
-  .header-inner { padding: .6rem 0; gap: .5rem; align-items: center; }
+  .header-inner { padding: .6rem 0; gap: .5rem; }
   .brand-logo { height: 64px; }
   .nav { gap: .5rem; flex-wrap: wrap; }
-}
-
-
-/* --- Subtle hero reveal animations --- */
-@keyframes ta-fade-up {
-  from { opacity: 0; transform: translateY(12px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-.reveal-up {
-  opacity: 0;
-  animation: ta-fade-up .8s ease-out forwards;
-}
-.delay-100 { animation-delay: .1s; }
-.delay-200 { animation-delay: .2s; }
-.delay-300 { animation-delay: .3s; }
-
-/* Respect motion preferences */
-@media (prefers-reduced-motion: reduce) {
-  .reveal-up, .delay-100, .delay-200, .delay-300 {
-    animation: none !important;
-    opacity: 1 !important;
-    transform: none !important;
-  }
-}
-
-
-/* --- Staggered reveal for Trust Bar icons --- */
-@keyframes ta-pop-in {
-  0% { opacity: 0; transform: translateY(8px) scale(0.98); }
-  100% { opacity: 1; transform: translateY(0) scale(1); }
-}
-
-.trustbar-animated .trust-item {
-  opacity: 0;
-  animation: ta-pop-in .6s ease-out forwards;
-}
-
-.trustbar-animated .trust-item:nth-child(1) { animation-delay: .05s; }
-.trustbar-animated .trust-item:nth-child(2) { animation-delay: .15s; }
-.trustbar-animated .trust-item:nth-child(3) { animation-delay: .25s; }
-.trustbar-animated .trust-item:nth-child(4) { animation-delay: .35s; }
-
-@media (prefers-reduced-motion: reduce) {
-  .trustbar-animated .trust-item {
-    animation: none !important;
-    opacity: 1 !important;
-    transform: none !important;
-  }
-}
-
-
-/* v11 layout tweaks to reduce bulk when images are off */
-.ta-hero { min-height: 360px; padding: 3rem 1rem 2.25rem; }
-@media (max-width: 640px) {
-  .ta-hero { min-height: 300px; padding: 2.25rem 1rem 1.75rem; }
 }
