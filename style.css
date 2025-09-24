@@ -217,3 +217,17 @@ html, body {
 /* Make <picture> behave like <img> universally */
 picture { display: block; max-width: 100%; height: auto; }
 picture img { display: block; max-width: 100%; height: auto; border-radius: inherit; }
+
+
+/* --- Nav icon styling --- */
+.nav-link { display: inline-flex; align-items: center; gap: .4rem; }
+.nav-icon { width: 18px; height: 18px; display: inline-block; fill: currentColor; }
+/* Slightly nudge icons down to align with text visually */
+.nav-icon { vertical-align: -2px; }
+
+/* --- Mobile header spacing for taller logo --- */
+@media (max-width: 640px) {
+  .header-inner { padding: .6rem 0; gap: .5rem; align-items: center; }
+  .brand-logo { height: 64px; }
+  .nav { gap: .5rem; flex-wrap: wrap; }
+}
