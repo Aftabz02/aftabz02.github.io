@@ -58,14 +58,8 @@ html, body {
   position: relative; overflow: hidden; color: #fff; text-align: center;
   min-height: 420px; padding: 4rem 1rem 3rem;
 }
-.ta-hero__background {
-  position: absolute; inset: 0;
-  background: url('/assets/img/Hero_Desktop_1920x600.png') center/cover no-repeat;
-  z-index: -2;
-}
 @media (max-width: 768px) {
   .ta-hero__background {
-    background-image: url('/assets/img/Hero_Mobile_1080x1080.png');
   }
 }
 .ta-hero__overlay {
@@ -278,4 +272,11 @@ picture img { display: block; max-width: 100%; height: auto; border-radius: inhe
     opacity: 1 !important;
     transform: none !important;
   }
+}
+
+
+/* v11 layout tweaks to reduce bulk when images are off */
+.ta-hero { min-height: 360px; padding: 3rem 1rem 2.25rem; }
+@media (max-width: 640px) {
+  .ta-hero { min-height: 300px; padding: 2.25rem 1rem 1.75rem; }
 }
