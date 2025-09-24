@@ -354,3 +354,8 @@ picture { display: block; }
 @media (max-width: 640px) {
   .before-after .ba-grid { grid-template-columns: 1fr; }
 }
+
+
+/* Ensure <picture> behaves nicely */
+picture { display:block; max-width:100%; }
+picture img { width:100%; height:auto; display:block; }
