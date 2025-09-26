@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <title>Book a Slot — TechAlive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Book a repair, upgrade, data recovery, or on-site visit with TechAlive." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="TechAlive Home">
+        <img src="/assets/img/TechAlive_Logo_Navbar_200w.png" alt="TechAlive Logo" class="brand-logo" />
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" class="nav-link active"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 8h-3v9h-5v-6H11v6H6v-9H3l9-8z"/></svg><span>Home</span></a>
+        <a href="about.html" class="nav-link"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 10h2v7h-2v-7zm0-4h2v2h-2V6zM12 2a10 10 0 100 20 10 10 0 000-20z"/></svg><span>About</span></a>
+        <a href="services.html" class="nav-link"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 2l-5 5-2-2 5-5 2 2zM3 14l7-7 7 7-7 7-7-7zm2.5 0L10 18.5 14.5 14 10 9.5 5.5 14z"/></svg><span>Services</span></a>
+        <a href="faq.html" class="nav-link"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 18h2v2h-2v-2zm1-16a9 9 0 100 18 9 9 0 000-18zm0 4a4 4 0 00-4 4h2a2 2 0 114 0c0 1.5-1.25 2.07-2.03 2.47-.6.3-.97.53-.97 1.53V15h2v-1.1c0-.32.06-.46.53-.7C12.8 12.73 14 11.85 14 10a3 3 0 00-3-3z"/></svg><span>FAQs</span></a>
+        <a href="https://www.ebay.co.uk/usr/techalive" class="nav-link" target="_blank" rel="noopener"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a2 2 0 100 4 2 2 0 000-4zm10 0a2 2 0 100 4 2 2 0 000-4zM7.2 14l.3-2h9.9a1 1 0 00.98-.8l1.4-7H6.1l-.3-2H2v2h2l2.2 11H19v-2H7.2z"/></svg><span>eBay Store</span></a>
+        <a href="index.html#contact" class="nav-link btn btn-primary"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.05 15.05 0 006.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11.4 21 3 12.6 3 2c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1l-2.2 2.2z"/></svg><span>Contact</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero light">
+    <div class="container">
+      <h1>Book a Slot</h1>
+      <p>Select a service and your preferred time — we’ll confirm by email.</p>
+    </div>
+  </section>
+
+  <!-- Booking Form -->
+  <section class="section">
+    <div class="container narrow">
+      <form class="booking-form" action="https://formspree.io/f/xdklqldk" method="POST">
+        <div class="grid2">
+          <label>
+            <span>Full Name</span>
+            <input type="text" name="name" required />
+          </label>
+
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required />
+          </label>
+        </div>
+
+        <div class="grid2">
+          <label>
+            <span>Phone (optional)</span>
+            <input type="tel" name="phone" />
+          </label>
+
+          <label>
+            <span>Service</span>
+            <select name="service" required>
+              <option value="">Choose…</option>
+              <option>Laptop/PC Repair</option>
+              <option>Upgrade/Refurb</option>
+              <option>Data Recovery</option>
+              <option>Software Support</option>
+              <option>Mobiles & Consoles</option>
+              <option>3D Printing</option>
+              <option>Home/B2B Visit</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="grid2">
+          <label>
+            <span>Preferred Date</span>
+            <input type="date" name="date" id="date" required />
+          </label>
+
+          <label>
+            <span>Preferred Time</span>
+            <select name="time" id="time" required>
+              <option value="">Choose…</option>
+              <option>09:00–10:00</option>
+              <option>10:00–11:00</option>
+              <option>11:00–12:00</option>
+              <option>13:00–14:00</option>
+              <option>14:00–15:00</option>
+              <option>15:00–16:00</option>
+              <option>16:00–17:00</option>
+            </select>
+          </label>
+        </div>
+
+        <label>
+          <span>Briefly describe the issue</span>
+          <textarea name="message" rows="5" required placeholder="Model, symptoms, when it started, any errors…"></textarea>
+        </label>
+
+        <div class="grid2">
+          <label class="checkbox-row">
+            <input type="checkbox" name="dropoff" />
+            <span>I can drop off the device</span>
+          </label>
+          <label class="checkbox-row">
+            <input type="checkbox" name="onsite" />
+            <span>I prefer a home/business visit</span>
+          </label>
+        </div>
+
+        <div class="about-cta" style="margin-top:.8rem">
+          <button class="btn btn-primary" type="submit">Request Booking</button>
+          <a class="btn btn-ghost" href="services.html">See Pricing</a>
+        </div>
+
+        <p class="form-note" style="margin-top:.5rem">Submitting this form sends us your request. We’ll confirm availability or propose an alternative slot.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> TechAlive. All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="faq.html">FAQs</a>
+        <a href="booking.html">Book</a>
+        <a href="https://www.ebay.co.uk/str/unique-technology-solutions" target="_blank" rel="noopener">eBay Store</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Theme toggle
+    const modeToggle = document.getElementById('modeToggle');
+    const applyMode = (m) => document.documentElement.setAttribute('data-theme', m);
+    const saved = localStorage.getItem('ta-theme'); if(saved) applyMode(saved);
+    modeToggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme') || 'dark';
+      const next = current === 'dark' ? 'light' : 'dark';
+      applyMode(next); localStorage.setItem('ta-theme', next);
+    });
+
+    // Prefill date with the next business day (Mon–Fri)
+    (function(){
+      const d = new Date();
+      const day = d.getDay(); // 0 Sun … 6 Sat
+      let add = 1;
+      if(day === 5) add = 3;       // Fri -> Mon
+      else if(day === 6) add = 2;  // Sat -> Mon
+      const t = new Date(d.getFullYear(), d.getMonth(), d.getDate() + add);
+      const iso = t.toISOString().slice(0,10);
+      const dateEl = document.getElementById('date');
+      if(dateEl) dateEl.value = iso;
+      // min today+1
+      const min = new Date(d.getFullYear(), d.getMonth(), d.getDate()+1).toISOString().slice(0,10);
+      dateEl.min = min;
+    })();
+  </script>
+
+  <a href="https://wa.me/447933092874" class="whatsapp-fab" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 256 256" width="28" height="28" fill="currentColor" aria-hidden="true">
+      <path d="M128 24c-57.3 0-104 44.9-104 100.2 0 19 5.5 37 15.2 52.4L24 232l56.6-14.5c15 8.2 32.1 12.7 49.4 12.7 57.3 0 104-44.9 104-100.2S185.3 24 128 24zm0 176.4c-16.2 0-31.9-4.3-45.6-12.5l-3.2-1.9-33.6 8.6 9-32.7-2.1-3.3c-8.8-13.6-13.4-29.3-13.4-45.4 0-45.5 39.1-82.4 88.9-82.4s88.9 36.9 88.9 82.4-39.1 82.4-88.9 82.4zm50.6-51.1c-.6-.3-3.5-1.7-6.1-3-2.7-1.3-5.4-2.6-6.3-2.9-1-.4-1.8-.6-2.5.6s-2.9 3.5-3.5 4.2-1.3 1-2.4.3a68.7 68.7 0 01-20.2-17.6c-1.5-1.9-2.6-3.8-3-4.8-.6-1 .1-1.6.6-2.3.6-.6 1.3-1.6 1.9-2.5.6-.8.8-1.4 1.2-2.3.4-.8.2-1.7-.1-2.4s-2.5-6.1-3.4-8.3-1.8-1.9-2.5-1.9h-2.1c-.8 0-2 .3-3.1 1.5s-4.1 4-4.1 9.8 4.2 11.3 4.8 12.1c.6.8 8.2 13.2 20 18.5 2.8 1.2 5 1.9 6.7 2.5 2.8.9 5.3.8 7.2.5 2.2-.3 6.8-2.8 7.8-5.6 1-2.7 1-5 0-5.5z"/>
+    </svg>
+  </a>
+
+</body>
+</html>
