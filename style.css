@@ -1,9 +1,17 @@
-
 /* Base */
 *{box-sizing:border-box}
-:root{--blue:#0046a0;--accent:#00b9ff;--bg:#0b0f14;--text:#e9eef5;--muted:#bcd0ea}
+:root{
+  --blue:#0046a0;
+  --accent:#00b9ff;
+  --bg:#0b0f14;
+  --text:#e9eef5;
+  --muted:#bcd0ea;
+}
 html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+
+/* Layout */
 .container{max-width:1200px;margin:0 auto;padding:0 1.25rem}
+
 /* Header / Nav */
 .site-header{background:var(--blue);position:sticky;top:0;z-index:50}
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:.75rem 0}
@@ -12,6 +20,7 @@ html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,
 .nav-link{color:#fff;text-decoration:none;font-weight:600;padding:.4rem .6rem;border-radius:.5rem}
 .nav-link:hover{color:var(--accent)}
 .nav-link.active{background:rgba(255,255,255,.12)}
+
 /* Buttons */
 .btn{display:inline-block;text-decoration:none;font-weight:700;border-radius:.75rem;padding:.8rem 1.1rem}
 .btn-primary{background:var(--accent);color:#081016}
@@ -20,6 +29,7 @@ html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,
 .btn-ghost:hover{background:rgba(255,255,255,.08)}
 .btn-ebay{background:#ffe000;color:#111}
 .btn-ebay:hover{filter:brightness(1.05)}
+
 /* Hero */
 .ta-hero{padding:0}
 .ta-hero__inner{position:relative}
@@ -31,6 +41,7 @@ html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,
 .ta-hero__item{display:inline-flex;align-items:center;gap:.5rem;padding:.4rem .75rem;background:rgba(0,0,0,.35);border-radius:9999px}
 .ta-hero__icon{font-size:1.2rem}
 .ta-hero__divider{width:1px;height:18px;background:rgba(255,255,255,.35)}
+
 /* Trust Bar */
 .trustbar{background:#0e1621;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);padding:1rem 0}
 .trustbar-inner{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem;align-items:center;justify-items:center}
@@ -38,6 +49,7 @@ html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,
 .trust-item a{color:inherit;text-decoration:none}
 .trust-item a:hover{text-decoration:underline}
 .trust-icon{height:32px;width:32px;display:inline-block}
+
 /* Products */
 .products{padding:2rem 0 3rem}
 .products h2{font-size:1.8rem;margin:0 0 .25rem}
@@ -60,12 +72,14 @@ html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,
 .product-specs{margin:0 0 1rem;padding-left:1.1rem;color:#cfe3ff}
 .product-specs li{margin:.2rem 0}
 .product-cta{display:flex;gap:.6rem;flex-wrap:wrap}
+
 /* Contact & Footer */
 .contact{background:#0e1621;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
 .contact .container{padding:2rem 1rem}
 .contact a{color:var(--accent);text-decoration:none}
 .contact a:hover{text-decoration:underline}
 .site-footer{background:var(--blue);color:#fff;text-align:center;padding:1rem 0}
-/* Picture element */
+
+/* Make <picture> behave like <img> universally */
 picture{display:block;max-width:100%;height:auto}
 picture img{display:block;max-width:100%;height:auto;border-radius:inherit}
