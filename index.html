@@ -16,19 +16,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
-
-<body>
-  <!-- Header -->
+ <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="TechAlive Home">
-        <img src="/assets/img/TechAlive_Logo_Navbar_200w.png" alt="TechAlive Logo" class="brand-logo" />
+        <img src="assets/img/TechAlive_Logo_Navbar_200w.png" alt="TechAlive Logo" class="brand-logo" />
+        <span class="brand-name">TechAlive</span>
       </a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open menu">
+      <label for="nav-toggle" class="nav-burger" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+
       <nav class="nav" aria-label="Primary">
         <a href="index.html" class="nav-link active">Home</a>
         <a href="about.html" class="nav-link">About</a>
         <a href="services.html" class="nav-link">Services</a>
         <a href="faq.html" class="nav-link">FAQs</a>
+        <a href="booking.html" class="nav-link">Book</a>
         <a href="https://www.ebay.co.uk/usr/techalive" class="nav-link" target="_blank" rel="noopener">eBay Store</a>
         <a href="#contact" class="nav-link btn btn-primary">Contact</a>
       </nav>
@@ -39,33 +45,26 @@
   <section class="ta-hero">
     <div class="container ta-hero__inner">
       <picture class="ta-hero__picture">
-        <!-- Mobile -->
-        <source srcset="/assets/products/clean/neutral/Hero_Mobile_1080x1080.webp" media="(max-width: 720px)" type="image/webp">
-        <source srcset="/assets/products/clean/neutral/Hero_Mobile_1080x1080.jpg"  media="(max-width: 720px)" type="image/jpeg">
-        <!-- Desktop -->
-        <source srcset="/assets/products/clean/neutral/Hero_Desktop_1920x600.webp" media="(min-width: 721px)" type="image/webp">
-        <source srcset="/assets/products/clean/neutral/Hero_Desktop_1920x600.jpg"  media="(min-width: 721px)" type="image/jpeg">
-        <img src="/assets/products/clean/neutral/Hero_Desktop_1920x600.jpg" alt="TechAlive — Refurbished laptops and tech support" class="ta-hero__img">
+        <source srcset="assets/products/clean/neutral/Hero_Mobile_1080x1080.webp" media="(max-width: 720px)" type="image/webp">
+        <source srcset="assets/products/clean/neutral/Hero_Mobile_1080x1080.jpg"  media="(max-width: 720px)" type="image/jpeg">
+        <source srcset="assets/products/clean/neutral/Hero_Desktop_1920x600.webp" media="(min-width: 721px)" type="image/webp">
+        <source srcset="assets/products/clean/neutral/Hero_Desktop_1920x600.jpg"  media="(min-width: 721px)" type="image/jpeg">
+        <img src="assets/products/clean/neutral/Hero_Desktop_1920x600.jpg" alt="Refurbished laptops and reliable tech support" class="ta-hero__img">
       </picture>
 
+      <!-- No overlapping: content sits below the image -->
       <div class="ta-hero__content">
-        <h1 class="ta-hero__title">Tech support made simple, reliable, and affordable.</h1>
-        <p class="ta-hero__subtitle">Your trusted partner for IT repairs, upgrades & support across Leicestershire.</p>
-
+        <h1 class="ta-hero__title">Repairs & Refurbs you can trust.</h1>
+        <p class="ta-hero__subtitle">Leicester-based support for laptops, PCs, consoles & phones — with honest pricing and quick turnaround.</p>
         <ul class="ta-hero__highlights" aria-label="Key Services">
-          <li class="ta-hero__item"><span class="ta-hero__icon">🛠️</span><span>Repairs</span></li>
-          <li class="ta-hero__divider"></li>
-          <li class="ta-hero__item"><span class="ta-hero__icon">⚡</span><span>Upgrades</span></li>
-          <li class="ta-hero__divider"></li>
-          <li class="ta-hero__item"><span class="ta-hero__icon">💾</span><span>Data Recovery</span></li>
-          <li class="ta-hero__divider"></li>
-          <li class="ta-hero__item"><a href="faq.html" class="faq-link"><span class="ta-hero__icon">❓</span><span>FAQs</span></a></li>
+          <li>🛠️ Repairs</li>
+          <li>⚡ Upgrades</li>
+          <li>💾 Data Recovery</li>
+          <li>🛒 <a href="https://www.ebay.co.uk/usr/techalive" target="_blank" rel="noopener">Shop on eBay</a></li>
         </ul>
-
         <div class="cta-row">
           <a class="btn btn-primary" href="#contact">Get a Free Quote</a>
           <a class="btn btn-ghost" href="about.html">Learn More</a>
-          <a class="btn btn-ebay" href="https://www.ebay.co.uk/usr/techalive" target="_blank" rel="noopener">🛒 Shop on eBay</a>
         </div>
       </div>
     </div>
@@ -208,6 +207,26 @@
       <h2>Contact</h2>
       <p>Email: <a href="mailto:tech2alive@gmail.com">tech2alive@gmail.com</a> · WhatsApp: <a href="https://wa.me/447933092874">07933 092874</a></p>
       <p>eBay: <a href="https://www.ebay.co.uk/usr/techalive" target="_blank" rel="noopener">ebay.co.uk/usr/techalive</a></p>
+
+      <!-- Formspree example (replace id if needed) -->
+      <form action="https://formspree.io/f/xdklqldk" method="POST" class="contact-form">
+        <div class="row">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required>
+          </label>
+        </div>
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary">Send</button>
+        <p class="form-note" aria-live="polite">We aim to reply within 24 hours.</p>
+      </form>
     </div>
   </section>
 
