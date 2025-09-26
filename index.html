@@ -198,15 +198,28 @@
       <h2>Contact</h2>
       <p>Email: <a href="mailto:tech2alive@gmail.com">tech2alive@gmail.com</a> · WhatsApp: <a href="https://wa.me/447933092874">07933 092874</a></p>
       <p>eBay: <a href="https://www.ebay.co.uk/usr/techalive" target="_blank" rel="noopener">ebay.co.uk/usr/techalive</a></p>
+
+      <!-- Formspree example (replace id if needed) -->
+      <form action="https://formspree.io/f/xdklqldk" method="POST" class="contact-form">
+        <div class="row">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required>
+          </label>
+        </div>
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary">Send</button>
+        <p class="form-note" aria-live="polite">We aim to reply within 24 hours.</p>
+      </form>
     </div>
   </section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; <span id="year"></span> TechAlive — Refurbished Laptops & Repairs You Can Trust</p>
-    </div>
-  </footer>
 
   <script>
     // Current year
