@@ -2,338 +2,169 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <title>TechAlive — Refurbished Laptops, Repairs & Support in Leicestershire</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TechAlive — Refurbished Laptops, Repairs & Support</title>
-  <meta name="description" content="TechAlive in Leicester: quality refurbished laptops, device repairs, upgrades, and friendly tech support. Fast delivery and 12-month warranty." />
-  <link rel="canonical" href="https://www.techalive.co.uk/" />
-
-  <!-- Open Graph -->
+  <meta name="description" content="TechAlive provides reliable tech repairs, quality refurbished laptops, upgrades, and friendly support across Leicestershire." />
+  <link rel="canonical" href="https://www.techalive.co.uk/">
   <meta property="og:title" content="TechAlive — Refurbished Laptops, Repairs & Support" />
-  <meta property="og:description" content="Quality refurbished laptops, expert repairs, fair prices. Fast delivery & 12-month warranty." />
-  <meta property="og:url" content="https://www.techalive.co.uk/" />
+  <meta property="og:description" content="Repairs, upgrades, data recovery, and refurbished electronics you can trust." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://www.techalive.co.uk/assets/og/og-hero.jpg" />
-
+  <meta property="og:image" content="https://www.techalive.co.uk/assets/products/clean/neutral/Hero_Desktop_1920x600.jpg">
   <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#home" aria-label="TechAlive Home">
-        <img src="/assets/logo/TechAlive_Logo_Navbar_200w.png" alt="TechAlive logo" width="200" height="64" loading="eager" />
+      <a class="brand" href="index.html" aria-label="TechAlive Home">
+        <img src="assets/img/TechAlive_Logo_Navbar_200w.png" alt="TechAlive Logo" class="brand-logo" />
         <span class="brand-name">TechAlive</span>
       </a>
 
-      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu">
-        ☰
-      </button>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open menu">
+      <label for="nav-toggle" class="nav-burger" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
 
-      <nav id="primary-nav" class="nav">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#products">Products</a>
-        <a href="#about">About</a>
-        <a href="#faqs">FAQs</a>
-        <a href="#contact">Contact</a>
-        <a class="btn btn-outline" href="https://www.ebay.co.uk/usr/techalive" rel="noopener" target="_blank">eBay Shop</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="faq.html" class="nav-link">FAQs</a>
+        <a href="booking.html" class="nav-link">Book</a>
+        <a href="https://www.ebay.co.uk/usr/techalive" class="nav-link" target="_blank" rel="noopener">eBay Store</a>
+        <a href="#contact" class="nav-link btn btn-primary">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero (no text overlay) -->
-  <section id="home" class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <h1>Refurbished Laptops & Expert Repairs</h1>
-        <p>Great value, pro-grade testing, and friendly support. Based in Leicester — delivering UK-wide with warranty.</p>
-        <div class="hero-ctas">
-          <a class="btn" href="#products">Browse Products</a>
-          <a class="btn btn-outline" href="https://www.ebay.co.uk/usr/techalive" target="_blank" rel="noopener">Shop on eBay</a>
-        </div>
-        <ul class="ticks">
-          <li>12-Month Warranty</li>
-          <li>Fast Delivery</li>
-          <li>Support via WhatsApp 24/7</li>
+  <!-- Hero -->
+  <section class="ta-hero">
+    <div class="container ta-hero__inner">
+      <picture class="ta-hero__picture">
+        <source srcset="assets/products/clean/neutral/Hero_Mobile_1080x1080.webp" media="(max-width: 720px)" type="image/webp">
+        <source srcset="assets/products/clean/neutral/Hero_Mobile_1080x1080.jpg"  media="(max-width: 720px)" type="image/jpeg">
+        <source srcset="assets/products/clean/neutral/Hero_Desktop_1920x600.webp" media="(min-width: 721px)" type="image/webp">
+        <source srcset="assets/products/clean/neutral/Hero_Desktop_1920x600.jpg"  media="(min-width: 721px)" type="image/jpeg">
+        <img src="assets/products/clean/neutral/Hero_Desktop_1920x600.jpg" alt="Refurbished laptops and reliable tech support" class="ta-hero__img">
+      </picture>
+
+      <!-- No overlapping: content sits below the image -->
+      <div class="ta-hero__content">
+        <h1 class="ta-hero__title">Repairs & Refurbs you can trust.</h1>
+        <p class="ta-hero__subtitle">Leicester-based support for laptops, PCs, consoles & phones — with honest pricing and quick turnaround.</p>
+        <ul class="ta-hero__highlights" aria-label="Key Services">
+          <li>🛠️ Repairs</li>
+          <li>⚡ Upgrades</li>
+          <li>💾 Data Recovery</li>
+          <li>🛒 <a href="https://www.ebay.co.uk/usr/techalive" target="_blank" rel="noopener">Shop on eBay</a></li>
         </ul>
-      </div>
-      <div class="hero-media">
-        <picture>
-          <source srcset="/assets/hero/Hero_Desktop_1920x600.webp" type="image/webp" />
-          <img src="/assets/hero/Hero_Desktop_1920x600.jpg" alt="Refurbished laptops neatly arranged" width="960" height="480" loading="eager" />
-        </picture>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#contact">Get a Free Quote</a>
+          <a class="btn btn-ghost" href="about.html">Learn More</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Trust badges -->
-  <section class="trust">
-    <div class="container trust-grid">
-      <div class="trust-item">
-        <img src="/assets/icons/warranty.svg" alt="" width="28" height="28" loading="lazy" />
-        <p><strong>Warranty</strong><br>12-Month hardware cover</p>
-      </div>
-      <div class="trust-item">
-        <img src="/assets/icons/shipping.svg" alt="" width="28" height="28" loading="lazy" />
-        <p><strong>Fast Delivery</strong><br>Tracked & insured</p>
-      </div>
-      <div class="trust-item">
-        <img src="/assets/icons/checklist.svg" alt="" width="28" height="28" loading="lazy" />
-        <p><strong>Pro-Tested</strong><br>30-point QC checklist</p>
-      </div>
-      <div class="trust-item">
-        <img src="/assets/icons/support.svg" alt="" width="28" height="28" loading="lazy" />
-        <p><strong>Real Support</strong><br>WhatsApp 07933&nbsp;092874</p>
-      </div>
+  <!-- Trustbar -->
+  <section class="trustbar">
+    <div class="container trustbar-inner">
+      <div class="trust-item"><img src="assets/warranty_64.png" alt="Warranty" class="trust-icon"><span>30‑day <strong>warranty</strong></span></div>
+      <div class="trust-item"><img src="assets/paypal_64.png" alt="PayPal" class="trust-icon"><span><strong>PayPal</strong> accepted</span></div>
+      <div class="trust-item"><img src="assets/ebay_64.png" alt="eBay" class="trust-icon"><span><a href="https://www.ebay.co.uk/usr/techalive" target="_blank" rel="noopener">Shop on <strong>eBay</strong></a></span></div>
+      <div class="trust-item"><img src="assets/delivery_64.png" alt="Delivery" class="trust-icon"><span><strong>Fast</strong> tracked delivery</span></div>
     </div>
   </section>
 
-  <!-- Services -->
-  <section id="services" class="section">
+  <!-- Products teaser -->
+  <section id="products" class="products">
     <div class="container">
-      <h2 class="section-title">What we do</h2>
-      <div class="cards-3">
-        <article class="service-card">
-          <h3>Refurbished Laptops</h3>
-          <p>Quality, great value devices with fresh OS, new thermal paste, SMART-checked SSDs, and clean installs.</p>
-        </article>
-        <article class="service-card">
-          <h3>Repairs & Upgrades</h3>
-          <p>Screen, battery, keyboard, ports, board-level fixes; RAM/SSD upgrades and thermal servicing.</p>
-        </article>
-        <article class="service-card">
-          <h3>Setup & Support</h3>
-          <p>Migration, Office install, anti-virus, performance tuning, and friendly help by phone or WhatsApp.</p>
-        </article>
-      </div>
-    </div>
-  </section>
+      <h2>Refurbished Laptops</h2>
+      <p class="products-subtitle">Fully tested • Fresh OS • 30‑day hardware warranty</p>
 
-  <!-- Products -->
-  <section id="products" class="section alt">
-    <div class="container">
-      <h2 class="section-title">Featured products</h2>
-
-      <!-- Product grid -->
       <div class="product-grid">
-        <!-- PRODUCT CARD TEMPLATE (duplicate & update details) -->
         <article class="product-card">
-          <a class="product-media" href="https://www.ebay.co.uk/usr/techalive" target="_blank" rel="noopener">
-            <picture>
-              <source srcset="/assets/products/refurbished-laptop-front.webp" type="image/webp" />
-              <img src="/assets/products/refurbished-laptop-front.jpg" alt="Dell Latitude 7490 — front view" width="420" height="280" loading="lazy" />
-            </picture>
-          </a>
-          <div class="product-content">
-            <h3 class="product-title">Dell Latitude 7490</h3>
-            <p class="product-specs">i5 8th Gen • 16GB RAM • 512GB SSD • 14” FHD</p>
-            <div class="product-meta">
-              <span class="price">£319</span>
-              <span class="badge">Refurbished</span>
-            </div>
-            <div class="product-actions">
-              <a class="btn btn-sm" href="https://www.ebay.co.uk/usr/techalive" target="_blank" rel="noopener">View on eBay</a>
-            </div>
-          </div>
+          <picture class="product-main">
+            <source srcset="assets/products/clean/neutral/generic_laptop_1.webp" type="image/webp">
+            <img src="assets/products/clean/neutral/generic_laptop_1.jpg" alt="Refurbished laptop">
+          </picture>
+          <h3 class="product-title">Everyday 14–15&quot; Laptops</h3>
+          <p class="product-meta">8–16GB RAM • SSD • Windows 11</p>
+          <a href="https://www.ebay.co.uk/usr/techalive" target="_blank" rel="noopener" class="btn btn-ghost">View on eBay</a>
         </article>
 
         <article class="product-card">
-          <a class="product-media" href="https://www.ebay.co.uk/usr/techalive" target="_blank" rel="noopener">
-            <picture>
-              <source srcset="/assets/products/refurbished-laptop-open.webp" type="image/webp" />
-              <img src="/assets/products/refurbished-laptop-open.jpg" alt="HP ProBook 450 G6 — open view" width="420" height="280" loading="lazy" />
-            </picture>
-          </a>
-          <div class="product-content">
-            <h3 class="product-title">HP ProBook 450 G6</h3>
-            <p class="product-specs">i7 8th Gen • 16GB RAM • 512GB SSD • 15.6” FHD</p>
-            <div class="product-meta">
-              <span class="price">£379</span>
-              <span class="badge">12-Month Warranty</span>
-            </div>
-            <div class="product-actions">
-              <a class="btn btn-sm" href="https://www.ebay.co.uk/usr/techalive" target="_blank" rel="noopener">View on eBay</a>
-            </div>
-          </div>
+          <picture class="product-main">
+            <source srcset="assets/products/clean/neutral/generic_laptop_2.webp" type="image/webp">
+            <img src="assets/products/clean/neutral/generic_laptop_2.jpg" alt="Thin & light refurbished ultrabook">
+          </picture>
+          <h3 class="product-title">Thin &amp; Light</h3>
+          <p class="product-meta">Aluminium • SSD • Long battery</p>
+          <a href="https://www.ebay.co.uk/usr/techalive" target="_blank" rel="noopener" class="btn btn-ghost">View on eBay</a>
         </article>
 
         <article class="product-card">
-          <a class="product-media" href="https://www.ebay.co.uk/usr/techalive" target="_blank" rel="noopener">
-            <picture>
-              <source srcset="/assets/products/refurbished-laptop-side.webp" type="image/webp" />
-              <img src="/assets/products/refurbished-laptop-side.jpg" alt="Lenovo ThinkPad T480 — side view" width="420" height="280" loading="lazy" />
-            </picture>
-          </a>
-          <div class="product-content">
-            <h3 class="product-title">Lenovo ThinkPad T480</h3>
-            <p class="product-specs">i5 8th Gen • 16GB RAM • 256GB SSD • 14” FHD</p>
-            <div class="product-meta">
-              <span class="price">£299</span>
-              <span class="badge">Fast Delivery</span>
-            </div>
-            <div class="product-actions">
-              <a class="btn btn-sm" href="https://www.ebay.co.uk/usr/techalive" target="_blank" rel="noopener">View on eBay</a>
-            </div>
-          </div>
+          <picture class="product-main">
+            <source srcset="assets/products/clean/neutral/generic_laptop_3.webp" type="image/webp">
+            <img src="assets/products/clean/neutral/generic_laptop_3.jpg" alt="Business grade refurbished laptop">
+          </picture>
+          <h3 class="product-title">Business Grade</h3>
+          <p class="product-meta">Pro build • Great keyboards</p>
+          <a href="https://www.ebay.co.uk/usr/techalive" target="_blank" rel="noopener" class="btn btn-ghost">View on eBay</a>
         </article>
-        <!-- /END TEMPLATE -->
-      </div>
-
-      <p class="center mt-24">
-        Looking for something specific?
-        <a class="link" href="https://www.ebay.co.uk/usr/techalive" target="_blank" rel="noopener">Browse all on eBay</a>
-        or <a class="link" href="#contact">message us</a>.
-      </p>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="section">
-    <div class="container about-grid">
-      <div>
-        <h2 class="section-title">About TechAlive</h2>
-        <p>With 20+ years of hands-on experience, TechAlive refurbishes, repairs and supports devices for homes and small businesses across Leicestershire and the UK. Every laptop is cleaned, tested and shipped ready to go.</p>
-        <ul class="ticks">
-          <li>Component-level skills & thorough QC</li>
-          <li>Clear grading & honest cosmetics</li>
-          <li>Friendly advice and aftercare</li>
-        </ul>
-      </div>
-      <div class="about-card">
-        <h3>Payment & Security</h3>
-        <p>Secure checkout via PayPal on eBay. Tracked shipping and returns accepted.</p>
-        <div class="payments">
-          <img src="/assets/payments/paypal.svg" alt="PayPal" loading="lazy" />
-          <img src="/assets/payments/visa.svg" alt="VISA" loading="lazy" />
-          <img src="/assets/payments/mastercard.svg" alt="Mastercard" loading="lazy" />
-          <img src="/assets/payments/amex.svg" alt="American Express" loading="lazy" />
-          <img src="/assets/payments/dpd.svg" alt="DPD" loading="lazy" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQs -->
-  <section id="faqs" class="section alt">
-    <div class="container">
-      <h2 class="section-title">FAQs</h2>
-      <div class="faq">
-        <details>
-          <summary>What warranty do you offer?</summary>
-          <p>Standard 12-month hardware warranty. Batteries are tested and healthy but classed as consumables.</p>
-        </details>
-        <details>
-          <summary>How fast is delivery?</summary>
-          <p>Orders placed before 12:00 usually ship same or next working day via tracked courier.</p>
-        </details>
-        <details>
-          <summary>What cosmetic condition should I expect?</summary>
-          <p>We grade transparently and include clear photos; minor wear may be present. Message us for exact pics.</p>
-        </details>
-        <details>
-          <summary>Do you accept returns?</summary>
-          <p>Yes — 30-day returns. Please keep packaging and include accessories.</p>
-        </details>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="section">
-    <div class="container contact-grid">
-      <div>
-        <h2 class="section-title">Contact us</h2>
-        <p>Questions, custom requests, bulk orders or repairs — we’d love to help.</p>
-        <ul class="contact-list">
-          <li><strong>WhatsApp:</strong> <a href="https://wa.me/447933092874" rel="noopener" target="_blank">07933&nbsp;092874</a> (24/7)</li>
-          <li><strong>Email:</strong> <a href="mailto:hello@techalive.co.uk">hello@techalive.co.uk</a></li>
-          <li><strong>Location:</strong> Leicester, UK</li>
-          <li><strong>Instagram:</strong> <a href="https://www.instagram.com/tech2alive" target="_blank" rel="noopener">@tech2alive</a></li>
-          <li><strong>Facebook:</strong> <a href="https://www.facebook.com/Techalive/" target="_blank" rel="noopener">TechAlive</a></li>
-        </ul>
-      </div>
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:tech2alive@gmail.com">tech2alive@gmail.com</a> · WhatsApp: <a href="https://wa.me/447933092874">07933 092874</a></p>
+      <p>eBay: <a href="https://www.ebay.co.uk/usr/techalive" target="_blank" rel="noopener">ebay.co.uk/usr/techalive</a></p>
 
-      <form class="contact-form" action="https://formspree.io/f/xdklqldk" method="POST">
+      <!-- Formspree example (replace id if needed) -->
+      <form action="https://formspree.io/f/xdklqldk" method="POST" class="contact-form">
+        <div class="row">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required>
+          </label>
+        </div>
         <label>
-          Your name
-          <input type="text" name="name" required />
-        </label>
-        <label>
-          Email
-          <input type="email" name="email" required />
-        </label>
-        <label>
-          Message
+          <span>Message</span>
           <textarea name="message" rows="5" required></textarea>
         </label>
-        <input type="hidden" name="_subject" value="New enquiry from techalive.co.uk" />
-        <input type="hidden" name="_captcha" value="false" />
-        <button class="btn" type="submit">Send message</button>
-        <p class="form-hint">By submitting, you agree we can contact you regarding your enquiry.</p>
+        <button type="submit" class="btn btn-primary">Send</button>
+        <p class="form-note" aria-live="polite">We aim to reply within 24 hours.</p>
       </form>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="brand brand-footer">
-          <img src="/assets/logo/TechAlive_Logo_Navbar_200w.png" alt="" width="160" height="50" loading="lazy" />
-          <span class="brand-name">TechAlive</span>
-        </div>
-        <p class="muted">Refurbished laptops, repairs & friendly support.</p>
-      </div>
-      <div class="footer-links">
-        <a href="#home">Home</a>
-        <a href="#products">Products</a>
-        <a href="#faqs">FAQs</a>
-        <a href="#contact">Contact</a>
-        <a href="https://www.ebay.co.uk/usr/techalive" target="_blank" rel="noopener">eBay Shop</a>
-      </div>
-      <div class="footer-fine">
-        <p>© <span id="year"></span> TechAlive. All rights reserved.</p>
-        <p class="muted">Built with care in Leicester.</p>
-      </div>
+    <div class="container">
+      <p>&copy; <span id="year"></span> TechAlive — Refurbished Laptops &amp; Repairs You Can Trust</p>
     </div>
   </footer>
 
-  <!-- JSON-LD (Organization + sample ItemList) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "TechAlive",
-    "url": "https://www.techalive.co.uk/",
-    "logo": "https://www.techalive.co.uk/assets/logo/TechAlive_Logo_Navbar_200w.png",
-    "sameAs": [
-      "https://www.facebook.com/Techalive/",
-      "https://www.instagram.com/tech2alive",
-      "https://www.ebay.co.uk/usr/techalive"
-    ],
-    "contactPoint": [{
-      "@type": "ContactPoint",
-      "contactType": "customer support",
-      "telephone": "+44-7933092874",
-      "areaServed": "GB"
-    }]
-  }
-  </script>
   <script>
-    // year + mobile nav
+    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
-    const btn = document.querySelector('.nav-toggle');
-    const nav = document.getElementById('primary-nav');
-    btn.addEventListener('click', () => {
-      const open = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!open));
-      nav.classList.toggle('open');
-    });
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => {
+      const cb = document.getElementById('nav-toggle');
+      if (cb) cb.checked = false;
+    }));
   </script>
 </body>
 </html>
