@@ -49,16 +49,30 @@ html{scroll-behavior:smooth}
   position:sticky; top:0; z-index:50;
   box-shadow:0 2px 12px rgba(0,0,0,.25)
 }
-.header-inner{
-  display:flex; align-items:center; justify-content:space-between;
-  gap:1rem; padding:.75rem 0
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .75rem 0;
 }
-.brand{
-  display:flex; align-items:center; gap:.75rem; text-decoration:none
+.brand {
+  display: flex;
+  align-items: center;
 }
-.brand-logo{
-  height:60px; /* bigger logo */
-  width:auto; display:block
+/* Bigger logo */
+.brand-logo {
+  height: 80px;   /* increase size */
+  width: auto;
+  display: block;
+}
+
+/* Business name next to logo */
+.brand-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;   /* white text */
+  margin-left: 1rem;
+
 }
 .site-title{
   margin:0;
@@ -248,8 +262,27 @@ html{scroll-behavior:smooth}
 .contact a{ color:var(--accent); text-decoration:none }
 .contact a:hover{ text-decoration:underline }
 
-.site-footer{
-  background:var(--blue); color:#fff; text-align:center; padding:1rem 0
+/* Ensure footer text is white */
+.site-footer {
+  background: var(--blue);
+  color: #fff; /* footer text white */
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.site-footer p {
+  color: #fff; /* force paragraph text white */
+}
+
+.social-links a {
+  color: #fff; /* links white */
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.social-links a:hover {
+  color: var(--accent); /* highlight on hover */
 }
 
 /* Make <picture> behave like <img> universally */
