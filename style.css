@@ -1,56 +1,181 @@
+/* =========================
+   TechAlive — Global Styles
+   ========================= */
+
 /* Base */
-*{box-sizing:border-box}
+* { box-sizing: border-box }
 :root{
   --blue:#0046a0;
   --accent:#00b9ff;
   --bg:#0b0f14;
+  --panel:#0e1621;
   --text:#e9eef5;
-  --muted:#bcd0ea;
+  --muted:#c7d7ee; /* slightly brighter for contrast */
+  --border:rgba(255,255,255,.08);
+  --shadow:0 8px 24px rgba(0,0,0,.35);
 }
-html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+html,body{
+  margin:0;
+  padding:0;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.6
+}
+html{scroll-behavior:smooth}
+
+/* Improve default focus visibility */
+:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:3px;
+  border-radius:.4rem
+}
 
 /* Layout */
-.container{max-width:1200px;margin:0 auto;padding:0 1.25rem}
+.container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 2rem; /* a touch more breathing room on desktop */
+}
+@media (max-width:720px){
+  .container{ padding:0 1.25rem }
+}
 
-/* Header / Nav */
-.site-header{background:var(--blue);position:sticky;top:0;z-index:50}
-.header-inner{display:flex;align-items:center;justify-content:space-between;padding:.75rem 0}
-.brand-logo{height:40px;width:auto;display:block}
-.nav{display:flex;align-items:center;gap:1rem}
-.nav-link{color:#fff;text-decoration:none;font-weight:600;padding:.4rem .6rem;border-radius:.5rem}
-.nav-link:hover{color:var(--accent)}
-.nav-link.active{background:rgba(255,255,255,.12)}
+/* =================
+   Header / Nav Bar
+   ================= */
+.site-header{
+  background:var(--blue);
+  position:sticky; top:0; z-index:50;
+  box-shadow:0 2px 12px rgba(0,0,0,.25)
+}
+.header-inner{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:1rem; padding:.75rem 0
+}
+.brand{
+  display:flex; align-items:center; gap:.75rem; text-decoration:none
+}
+.brand-logo{
+  height:60px; /* bigger logo */
+  width:auto; display:block
+}
+.site-title{
+  margin:0;
+  font-weight:800;
+  font-size:clamp(1.1rem,2.2vw,1.35rem);
+  letter-spacing:.2px;
+  color:#fff;
+  white-space:nowrap
+}
 
-/* Buttons */
-.btn{display:inline-block;text-decoration:none;font-weight:700;border-radius:.75rem;padding:.8rem 1.1rem}
-.btn-primary{background:var(--accent);color:#081016}
-.btn-primary:hover{filter:brightness(1.05)}
-.btn-ghost{color:#fff;border:2px solid rgba(255,255,255,.35)}
-.btn-ghost:hover{background:rgba(255,255,255,.08)}
-.btn-ebay{background:#ffe000;color:#111}
-.btn-ebay:hover{filter:brightness(1.05)}
+.nav{ display:flex; align-items:center; gap:.25rem }
+.nav-link{
+  color:#fff; text-decoration:none; font-weight:650;
+  padding:.5rem .75rem; border-radius:.6rem; position:relative
+}
+/* subtle underline grow on hover for feedback */
+.nav-link::after{
+  content:""; position:absolute; left:.75rem; right:.75rem; bottom:.35rem;
+  height:2px; background:transparent; transform:scaleX(0); transform-origin:left; transition:.25s
+}
+.nav-link:hover{ color:#fff }
+.nav-link:hover::after{ background:var(--accent); transform:scaleX(1) }
+.nav-link.active{ background:rgba(255,255,255,.14) }
 
-/* Hero */
-.ta-hero{padding:0}
-.ta-hero__inner{position:relative}
-.ta-hero__picture,.ta-hero__img{display:block;width:100%;height:auto}
-.ta-hero__content{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:1rem}
-.ta-hero__title{font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;margin:0 0 .75rem;text-shadow:0 2px 6px rgba(0,0,0,.55)}
-.ta-hero__subtitle{font-size:clamp(1rem,2.2vw,1.25rem);margin:0 0 1.5rem;color:var(--muted);text-shadow:0 1px 4px rgba(0,0,0,.55)}
-.ta-hero__highlights{list-style:none;display:flex;flex-wrap:wrap;gap:.75rem 1rem;align-items:center;justify-content:center;margin:0 0 1.75rem;padding:0}
-.ta-hero__item{display:inline-flex;align-items:center;gap:.5rem;padding:.4rem .75rem;background:rgba(0,0,0,.35);border-radius:9999px}
-.ta-hero__icon{font-size:1.2rem}
-.ta-hero__divider{width:1px;height:18px;background:rgba(255,255,255,.35)}
+/* Simple mobile wrap */
+@media (max-width:820px){
+  .header-inner{ flex-wrap:wrap }
+  .nav{ width:100%; justify-content:flex-start; gap:.5rem }
+}
 
-/* Trust Bar */
-.trustbar{background:#0e1621;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);padding:1rem 0}
-.trustbar-inner{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem;align-items:center;justify-items:center}
-.trust-item{display:flex;align-items:center;gap:.6rem;color:#d7e7ff;font-weight:600;font-size:1rem}
-.trust-item a{color:inherit;text-decoration:none}
-.trust-item a:hover{text-decoration:underline}
-.trust-icon{height:32px;width:32px;display:inline-block}
+/* ======
+   Buttons
+   ====== */
+.btn{
+  display:inline-block; text-decoration:none; font-weight:800;
+  border-radius:.8rem; padding:.85rem 1.1rem; transition:transform .12s ease, box-shadow .12s ease, filter .12s ease
+}
+.btn:active{ transform:translateY(1px) }
+.btn-primary{ background:var(--accent); color:#081016 }
+.btn-primary:hover{ filter:brightness(1.06); box-shadow:var(--shadow) }
+.btn-ghost{ color:#fff; border:2px solid rgba(255,255,255,.35) }
+.btn-ghost:hover{ background:rgba(255,255,255,.08) }
+.btn-ebay{ background:#ffe000; color:#111 }
+.btn-ebay:hover{ filter:brightness(1.05) }
 
-/* Products */
+/* ====
+   Hero
+   ==== */
+
+/* By default: NO text overlapping the main image.
+   Use .ta-hero--overlay on .ta-hero if you ever want text on top again. */
+
+.ta-hero{ padding:0 }
+.ta-hero__inner{ display:block }
+.ta-hero__picture, .ta-hero__img{ display:block; width:100%; height:auto }
+
+/* Content shown BELOW the image by default */
+.ta-hero__content{
+  display:grid; place-items:center; text-align:center;
+  padding:1.25rem 1rem 1.5rem;
+  background:linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.02) 20%, rgba(0,0,0,.25) 100%);
+  border-top:1px solid var(--border)
+}
+.ta-hero__title{
+  font-size:clamp(1.9rem,3.2vw,2.6rem);
+  font-weight:900; margin:0 0 .6rem
+}
+.ta-hero__subtitle{
+  font-size:clamp(1rem,2.2vw,1.2rem);
+  margin:0 0 1.25rem; color:var(--muted)
+}
+.ta-hero__highlights{
+  list-style:none; display:flex; flex-wrap:wrap; gap:.75rem 1rem;
+  align-items:center; justify-content:center; margin:0 0 1.5rem; padding:0
+}
+.ta-hero__item{
+  display:inline-flex; align-items:center; gap:.5rem;
+  padding:.45rem .8rem; background:rgba(255,255,255,.05); border:1px solid var(--border);
+  border-radius:9999px
+}
+.ta-hero__icon{ font-size:1.2rem }
+.ta-hero__divider{ width:1px; height:18px; background:rgba(255,255,255,.25) }
+
+/* Modifier to overlay text on the image (optional) */
+.ta-hero.ta-hero--overlay .ta-hero__inner{ position:relative }
+.ta-hero.ta-hero--overlay .ta-hero__content{
+  position:absolute; inset:0; display:grid; place-items:center; background:transparent; border-top:none; padding:1rem
+}
+.ta-hero.ta-hero--overlay .ta-hero__inner::before{
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background:linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.55) 60%, rgba(0,0,0,.65) 100%)
+}
+
+/* =========
+   Trust Bar
+   ========= */
+.trustbar{
+  background:var(--panel);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  padding:1rem 0
+}
+.trustbar-inner{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:1.2rem; align-items:center; justify-items:center
+}
+.trust-item{
+  display:flex; align-items:center; gap:.6rem;
+  color:#d7e7ff; font-weight:700; font-size:1rem
+}
+.trust-item a{ color:inherit; text-decoration:none }
+.trust-item a:hover{ text-decoration:underline }
+.trust-icon{ height:32px; width:32px; display:inline-block }
+
+/* ========
+   Products
+   ======== */
 .products{padding:2rem 0 3rem}
 .products h2{font-size:1.8rem;margin:0 0 .25rem}
 .products-subtitle{color:var(--muted);margin:0 0 1.5rem}
@@ -73,13 +198,29 @@ html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,
 .product-specs li{margin:.2rem 0}
 .product-cta{display:flex;gap:.6rem;flex-wrap:wrap}
 
-/* Contact & Footer */
-.contact{background:#0e1621;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
-.contact .container{padding:2rem 1rem}
-.contact a{color:var(--accent);text-decoration:none}
-.contact a:hover{text-decoration:underline}
-.site-footer{background:var(--blue);color:#fff;text-align:center;padding:1rem 0}
+/* ===========
+   Contact/Foot
+   =========== */
+.contact{
+  background:var(--panel);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border)
+}
+.contact .container{ padding:2rem 1rem }
+.contact a{ color:var(--accent); text-decoration:none }
+.contact a:hover{ text-decoration:underline }
+
+.site-footer{
+  background:var(--blue); color:#fff; text-align:center; padding:1rem 0
+}
 
 /* Make <picture> behave like <img> universally */
-picture{display:block;max-width:100%;height:auto}
-picture img{display:block;max-width:100%;height:auto;border-radius:inherit}
+picture{ display:block; max-width:100%; height:auto }
+picture img{ display:block; max-width:100%; height:auto; border-radius:inherit }
+
+/* ===========
+   Preferences
+   =========== */
+@media (prefers-reduced-motion:reduce){
+  *{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important }
+}
