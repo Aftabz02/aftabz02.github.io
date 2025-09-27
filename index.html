@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <title>TechAlive — Tech support made simple, reliable, and affordable.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Repairs, upgrades, data recovery, software support, and 3D printing across Leicestershire. TechAlive brings your technology back to life." />
   <meta property="og:title" content="TechAlive — Simple, reliable, affordable tech support" />
@@ -18,16 +19,20 @@
 </head>
  <!-- Header -->
 <header class="site-header">
-  <div class="container header-inner">
-    <a href="/" class="brand">
-      <img src="assets/img/TechAlive_Logo_Navbar_200w.png" alt="TechAlive Logo" class="brand-logo">
-    </a>
-    <h1 class="brand-name">TechAlive.co.uk</h1>
-    <nav class="nav">
-         </nav>
-  </div>
-</header>
+  <a class="brand" href="/">
+    <img src="/assets/brand/TechAlive_Logo_Navbar_200w.png" alt="TechAlive logo" class="logo">
+    <span class="brand-name">TechAlive.co.uk</span>
+  </a>
 
+  <input id="nav-toggle" type="checkbox" />
+  <label for="nav-toggle" class="burger" aria-label="Toggle navigation">☰</label>
+
+  <nav class="nav">
+    <a href="#services">Services</a>
+    <a href="#shop">Shop</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
       <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open menu">
       <label for="nav-toggle" class="nav-burger" aria-hidden="true">
         <span></span><span></span><span></span>
